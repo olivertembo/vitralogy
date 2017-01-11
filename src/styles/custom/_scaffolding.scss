@@ -1,0 +1,44 @@
+@import "variables";
+@import "../variables";
+
+html,body {
+  height: auto !important;
+}
+
+body {
+  font-family: $font-family-base !important;
+  font-size: $font-size-base !important;
+  line-height: $line-height-base !important;
+  color: $text-color !important;
+  background-color: $background-color !important;
+}
+
+section:not(:last-of-type) {
+  margin-bottom: ($padding-large-vertical * 2);
+}
+
+.environment-watermark {
+  position: fixed;
+  top: 0px;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  left: 200px;
+  z-index: 99999;
+  color: #fff;
+  font-weight: bold;
+  background: #d2d2d2;
+  padding: 2px 10px; 
+  font-size: 2em;
+  pointer-events: none;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-header-logo {
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 12px auto !important;
+}
+
+.job-dashboard {
+  padding-top: 15px;
+}

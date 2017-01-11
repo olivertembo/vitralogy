@@ -1,0 +1,33 @@
+.container-left {
+  margin: 0;
+}
+
+.col-vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.job-detail__sidebar .photo-container {
+  .grid-sizer,
+  .tile {
+    width: 31%;
+  }
+  .gutter-sizer {
+    width: 1%;
+  }
+  .tile a {
+    margin-bottom: 5px;
+    figure {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.row-flex {
+  display: flex;
+}

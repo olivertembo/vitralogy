@@ -1,0 +1,22 @@
+.team-dashboard .loadingMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.team-detail.empty {
+  .message {
+    margin-top:200px;
+    text-align: center;
+    color: $gray-light;
+    .fa {
+      font-size: 5em;
+    }
+  }
+}
+
+.site-assignments {
+    padding: 10px;
+}

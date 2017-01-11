@@ -1,0 +1,21 @@
+@import "variables";
+@import "../variables";
+
+.content-area {
+  background-color: $background-color;
+  margin-top: $navbar-height;
+  //margin-bottom: 70px;
+  &.binder {
+    margin-bottom: 0;
+  }
+  @media (max-width: $screen-md-max) {
+    margin-top: 72px;
+  }
+  @media (max-width: $screen-sm) {
+    margin-top: 106px;
+  }
+}
+
+.userAccountList {
+    padding-top: 25px;
+}

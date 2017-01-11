@@ -1,0 +1,240 @@
+body {
+  overflow-x: hidden;
+  font-family: Poppins;
+}
+
+/* Toggle Styles */
+
+.job-detail--with-sidebar {
+  overflow: auto;
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+   .job-detail__sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 390px;
+    width: 64px;
+    height: calc(100% - 50px);
+    margin-left: -390px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #fff;
+    border-right: 1px solid $gray;
+    @media (max-width: $screen-sm-max) {
+      left: 300px;
+      margin-left: -300px;
+    }
+    & > section {display: none;}
+  }
+ 
+  .job-detail__content-wrapper {
+    position: absolute;
+    left: 64px;
+    width: calc(100% - 64px);
+    padding-top: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  &.toggled {
+    padding-left: 390px;
+    box-shadow: 0 1px 4px 0 rgba(23, 23, 37, 0.1);
+  
+    .job-detail__sidebar {
+      width: 390px;
+      @media (max-width: $screen-sm-max) {
+        width: 300px;
+      }
+    }
+   
+    .job-detail__content-wrapper {
+      position: absolute;
+      left: 390px;
+      width: calc(100% - 390px);
+      @media (max-width: $screen-sm-max) {
+        left: 300px;
+        width: calc(100% - 300px);
+      }
+    }
+    
+     & .job-detail__sidebar > section {display: block;}
+  }
+}
+
+.label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 1px;
+  padding: 5px 17px;
+  font-weight: normal;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+
+  &.label-default {
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid $gray-light;
+    color: $gray;
+  }
+  &.short {
+    padding: 5px 7px;
+  }
+}
+
+.job-detail__sidebar
+ {
+  h2 {
+    margin-top: 10px;
+  }
+
+  .section-header h4 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    cursor: pointer;
+    color: $black-color;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    &:after {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 22px;
+      content: '\f107';
+      cursor: pointer;
+      color: $gray-light;
+      transition: transform 800ms ease;
+    }
+    &.collapsed {
+      &:after {
+        transform: rotate( -180deg );
+      }
+    }
+  }
+
+  h1 {
+    font-size: 14px;
+    margin: 30px 0;
+    color: $icon-base-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .overview-padding {
+    transition: all 800ms ease;
+    max-height: 1000px;
+    overflow: hidden;
+    padding: 10px;
+    &.collapsed {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  hr {
+    border-color: $gray-light;
+  }
+
+  .toggle-icon {
+    position: absolute;
+    top: 34px;
+    right: 22px;
+    font-size: 14px;
+    color: $brand-primary;
+    cursor: pointer;
+    transform: rotate( -180deg );
+    transition: transform 800ms ease;
+  }
+
+  .section-title {
+    margin-bottom: ($padding-large-horizontal * 1.5)
+  }
+
+  .status .panel-body {
+    text-align: center;
+  }
+
+  .panel-body {
+    background:  $background-color;
+    white-space: normal;
+  }
+
+  .job-overview {
+    .row {
+      margin-bottom: $padding-large-horizontal;
+    }
+
+    .check-in-controls {
+      margin-top: ($padding-large-vertical * 1.5);
+      margin-bottom: ($padding-large-vertical * 1.5);
+    }
+  }
+
+  .comments {
+    .comment {
+      margin-bottom: ($padding-large-vertical * 2);
+      padding-bottom: $padding-small-vertical;
+      border-bottom: 1px solid $gray-lighter;
+    }
+    .comment__head {
+      margin-bottom: ($padding-large-vertical * 1)
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+}
+
+ul.overview-details {
+  li {
+    line-height: 1;
+    margin-bottom: 10px;
+    p {
+      margin: 0;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+ul.geo-details {
+    li {
+        text-align: left;
+    }
+}
+
+.complete-work-order-details li.item-error .resolved {
+  text-decoration: line-through;
+}
+
+.roundButton {
+  float: right;
+  border-radius: 50%;
+  background-color: $dark-blue-color;
+  padding: 15px;
+  border: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .icon {
+    width: 22px;
+    height: 22px;
+    fill: white;
+    path {
+      fill: white;
+    }
+  }
+}

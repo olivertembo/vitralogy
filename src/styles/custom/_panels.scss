@@ -1,0 +1,49 @@
+.react-tabs [role=tablist] {
+  margin-bottom: 0;
+}
+.react-tabs [role=tab] {
+  border-bottom: 1px solid transparent;
+  &:not([aria-selected=true]):hover {
+    background: $accent-color;
+    color: $primary-color-text;
+    border-bottom: 1px solid $gray-light;
+  }
+  &[aria-selected=true] {
+    border-radius: $border-radius $border-radius 0 0;
+    -moz-border-radius: $border-radius $border-radius 0 0;
+    -webkit-border-radius: $border-radius $border-radius 0 0;
+    border-color: $gray-light;
+    border-bottom-color: transparent;
+    &:hover {
+      background: #fff;
+      color: $primary-text-color;
+    }
+  }
+}
+
+.ReactTabs__TabPanel {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid $gray-light;
+  border-top: none;
+}
+
+.panel .panel-heading a {
+  &:after {
+    content: "\f107";
+    float: right;
+    margin-top: -3px;
+    font: normal normal normal 1.5em/1 FontAwesome;
+  }
+  &.collapsed:after {
+    content: "\f106";
+    margin-top: -5px;
+  }
+}
+
+.panel-disabled {
+  pointer-events: none;
+  opacity: 0.65;
+  box-shadow: none;
+  cursor: not-allowed;
+}

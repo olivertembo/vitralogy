@@ -1,0 +1,409 @@
+.job-id {
+  font-family: Poppins;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 60px;
+  background-color: white;
+
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    color: $black-color;
+    margin: 0;
+  }
+}
+
+
+.job-detail {
+  font-family: Poppins;
+  letter-spacing: 0.1px;
+  .job-tabs {
+    display: flex;
+    width: 100%;
+    margin: 30px 0 0;
+    &.sub-tabs {
+      margin: 20px 0 0;
+      .tab-label {
+        font-size: 14px;
+      }
+    }
+    .tab-label {
+      flex: 1;
+      padding: 20px 27px;
+      margin: 0 10px;
+      border-radius: 20px;
+      background-color: white;
+      color: $gray-darker;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      border: 0;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+      outline: none;
+      font-weight: bold;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        box-shadow: 0 12px 15px 0 rgba(23, 23, 37, 0.15);
+        color: $blue-color;
+        path {
+          fill: $blue-color;
+        }
+      }
+    }
+  }
+  .tabSection {
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    .title-separator {
+      color: $black-color;
+      position: relative;
+      font-weight: bold;
+      margin: 10px 0;
+      z-index: 0;
+      span {
+        background: white;
+        position: relative;
+        padding-right: 10px;
+        z-index: 1;
+      }
+      &:after {
+        content: ' ';
+        width: 100%;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        border-bottom: 1px solid $gray-lighter;
+        z-index: 0;
+      }
+    }
+    .list-blocks {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      &>li {
+        flex: 1;
+        margin: 0 12px;
+        background-color: $background-color;
+        border-radius: 15px;
+        padding: 20px 10px;
+        max-width: 220px;
+        border: 1px solid $gray-lighter;
+        min-width: 170px;
+        margin-bottom: 20px;
+
+        &.long {
+          max-width: 540px;
+        }
+
+        span {
+          display: block;
+          font-size: 12px;
+          span {
+            display: inline;
+          }
+        }
+
+      }
+      .btn.btn-sm.btn-link {
+        padding: 0;
+        padding-right: 10px;
+      }
+      .icon {
+        cursor: pointer;
+      }
+      .text-status {
+        font-size: 14px;
+      }
+      .flex-header {
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+          background: white;
+          margin-right: 10px;
+          font-family: FontAwesome;
+          border: 1px solid $pale-lilac-color;
+          color: $icon-base-color;
+          border-radius: 3px;
+          padding: 0;
+          display: flex;
+          height: 16px;
+          width: 16px;
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: space-around;
+          outline: none;
+          &:before {
+            content: '\f067';
+            font-size: 10px;
+          }
+          &.active:before{
+            content: '\f068';
+          }
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .icon-container {
+        display: flex;
+        justify-content: space-around;
+      }
+      &.expandable {
+        align-items: flex-start;
+        align-content: flex-start;
+
+      }
+      .image-border {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 135px;
+        padding: 0 8px;
+        margin-bottom: 10px;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          border: 2px solid $charcoal-grey-color;
+          padding: 1px;
+        }
+      }
+      .click-header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        svg{
+          width: 24px;
+          margin-right: 6px;
+          path{
+            fill: $charcoal-grey-color;
+          }
+        }
+      }
+
+    }
+  }
+  .complete-button {
+    padding: 8px 18px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $dark-blue-color;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    outline: none;
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+
+.fixed {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
+
+.icons-color {
+  color: $medium-blue-color;
+  path {
+    fill: $medium-blue-color;
+  }
+}
+.pending-color {
+  color: $orange-color;
+}
+
+ul.job-progress-bar {
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin: 0 $padding-large-horizontal;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    color: $charcoal-grey-color;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:not(.separator):before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: $padding-small-horizontal;
+      margin-bottom: -2px;
+      border: 2px solid $gray;
+      border-radius: 50%;
+    }
+    &.complete:before {
+      background: $accent-color;
+      border-color: $accent-color;
+    }
+    &.in-progress:before {
+      background: $gray;
+      border-color: $gray;
+    }
+    &.incomplete:before {
+      background: $warning-color;
+      border-color: $warning-color;
+    }
+    &.separator {
+      width: 50px;
+      border-bottom: 1px solid $gray;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.job-detail .list-group-item {
+  background: $background-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .formControlsSelect {
+    width: 300px;
+  }
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  .filter-buttons {
+    border-radius: 8px;
+    border: solid 1px $gray-lighter;
+    padding: 1px;
+    button {
+      background-color: transparent;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 0;
+      letter-spacing: 0.2px;
+      outline: none;
+      &.active {
+        background-color: $dark-blue-color;
+        color: white;
+
+      }
+    }
+  }
+  .progress-container {
+    width: 350px;
+    .ant-progress-inner {
+      border: 1px solid $pale-lilac-color;
+      padding: 1px;
+    }
+    .ant-progress-outer {
+      padding-right: 0;
+    }
+    .ant-progress-text {
+      position: absolute;
+      right: 100%;
+      top: 4px;
+      font-weight: bold;
+      font-size: 12px;
+      color: $charcoal-grey-color;
+    }
+  }
+  margin-bottom: 20px;
+}
+
+
+.panel__section {
+  padding: ($padding-large-horizontal * 8.5) ($padding-large-horizontal * 1.5);
+  padding-top: 0;
+  &:last-child {
+    padding-bottom: 30px;
+  }
+}
+
+ul.resource-details {
+  li {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+}
+
+form.prereqs {
+  .checkbox {
+    margin-left: 15px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.overview-padding, .data-system-load {
+  padding: 10px;
+}
+
+.issue {
+    color: red;
+    font-weight: bold;
+}
+
+.no-issue {
+    color: $status-active-color;
+    font-weight: bold;
+}
+
+.issue .fa-exclamation-triangle {
+    animation-name: flash;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: red;}
+    to {color: black;}
+}
+
+.job-detail .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-5x {
+    vertical-align: middle;
+}
+
+.change-status-padding {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.sign-off li.item-error .resolved {
+  text-decoration: line-through;
+}
+
+.sign-off {
+  text-decoration: line-through;
+}

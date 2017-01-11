@@ -1,0 +1,56 @@
+// Grays
+$gray-base: #373737;
+$gray-dark: $gray-base;
+$gray: #777777;
+$gray-light: #9b9b9b;
+$gray-lighter: #e8e8e8;
+$gray-lightest: #f4f4f4;
+$off-white: #f2f2f2;
+// Brand Colors
+$primary-color-dark: #303f9f;
+$primary-color: #3f51b5;
+$primary-color-light: #c5cae9;
+$primary-color-text: #ffffff;
+$accent-color: #448aff;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
+$warning-color: #f0ad4e;
+$danger-color: #d9534f;
+$success-color: #5cb85c;
+// Nav bar colors (switching done in js based on REACT_APP_PLATFORM_ENV
+// also child classes in _nav_main.scss
+$nav-color-dev: #d9534f;
+$nav-color-qa: #f0ad4e;
+$nav-color-staging: #5cb85c;
+$nav-color-prod: $primary-color-dark;
+// Fonts
+$font-family-sans-serif: "Open Sans",
+sans-serif;
+$font-title: "Poppins",
+sans-serif;
+$font-body: "Open Sans",
+sans-serif;
+$text-color: $primary-text-color;
+$body-bg: $off-white;
+$bg-color-content-area: $off-white;
+$hover-color: $accent-color;
+$border-radius: 0px;
+$padding-small-vertical: 8px;
+$padding-large-vertical: 16px;
+$padding-small-horizontal: 5px;
+$padding-large-horizontal: 10px;
+$z-index-standard: 900;
+$z-index-navbar: 1000;
+$z-index-dropdown: 1000;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+$z-index-navbar-fixed: 1030;
+$z-index-modal-background: 1040;
+$z-index-modal: 1050;
+$z-index-react-s-alert: 1200;
+$navbar-height: 70px;
+$content-area-margin-top: 70px;
+$content-area-margin-bottom: 70px;
+$invoice-filters-height: 50px;
+$dl-horizontal-offset: 110px;

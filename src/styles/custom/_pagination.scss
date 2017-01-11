@@ -1,0 +1,17 @@
+.pagination {
+  > li {
+    font-weight: 600;
+    &:first-child {
+      > a,
+      > span {
+        border-radius: 0;
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        border-radius: 0;
+      }
+    }
+  }
+}

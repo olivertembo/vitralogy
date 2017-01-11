@@ -1,0 +1,70 @@
+.Select-control {
+  border-radius: 0!important;
+  border-color: transparent!important;
+  .panel-body & {
+    border-color: $gray-lightest!important;
+  }
+}
+
+.Select-menu-outer {
+  border-radius: 0!important;
+}
+
+.form-control {
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: 0 1px 1px rgba(0,0,0,.075);
+}
+
+.input-xs {
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  .form-inline & { margin: 0px $padding-small-horizontal; }
+  .in-range & { width: 50px; }
+}
+
+input[type=number].input-xs::-webkit-inner-spin-button, 
+input[type=number].input-xs::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.work-scope-fields {
+  textarea {
+    resize: vertical;
+  }
+  .SingleDatePicker {
+    display: block;
+  }
+  .SingleDatePickerInput {
+    border-width: 0;
+  }
+
+  .DateInput {
+    height: 36px;
+    padding: 4px 10px;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+  }
+
+  .DateInput__display-text--focused {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .DateInput--with-caret::before,
+  .DateInput--with-caret::after {
+    top: 36px
+  }
+
+  .SingleDatePicker__picker {
+    top: 46px;
+  }
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.btn-group-vertical>.btn:first-child:not(:last-child),
+.btn-group-vertical>.btn:last-child:not(:first-child) {
+  border-radius: 0;
+}

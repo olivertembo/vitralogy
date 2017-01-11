@@ -1,0 +1,110 @@
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+.btn,
+.btn-sm,
+.btn-lg {
+  border-radius: 0;
+}
+
+.job-detail .page-header .btn {
+  margin-top: 2px;
+}
+
+.job-data-details {
+  .btn:active:focus, .btn:focus {
+    outline: none;
+  }
+}
+
+.close {
+  color: $primary-color-text !important;
+  background-color: $primary-color-text;
+  opacity: 1;
+}
+
+button.close.ril-close {
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  opacity: .7;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…UgLTEuMjUsLTEuMjUgNy41LC03LjUgLTcuNSwtNy41IHoiIGZpbGw9IiNGRkYiLz48L3N2Zz4=) no-repeat 50%;
+  float: none;
+  line-height: 24px !important;
+  color: #fff !important;
+  text-shadow: none;
+  &:before {
+    font: normal normal normal 30px/1 FontAwesome;
+    content: '\f00d'
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.btn-inline {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 16px;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.btn-filters {
+  padding: 4px 8px;
+  margin-top: 3px;
+  border-bottom: 0;
+  border-color: $gray-lighter;
+  &:hover {
+    background: $accent-color;
+    border-color: $accent-color;
+    color: $primary-color-text;
+  }
+  &:focus, &:active:focus, &.active:focus {
+    outline: none;
+    background: inherit;
+    border-color: $gray-lighter;
+    &:hover {
+      color: darken(#fff,15%);
+    }
+  }
+  &.active, &.active:hover {
+    box-shadow: 0px 2px 1px rgba(0,0,0,.1);
+    border-color: transparent;
+    background: $accent-color;
+    color: $primary-color-text;
+  }
+}
+
+.status-button-list {
+  padding-top: 10px;
+  padding-left: 10px;
+  .btn.btn-default:focus:not(.active) {
+    background: transparent;
+    &:hover {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #adadad;
+    }
+  }
+  .btn-default.active:focus, .btn-default:active:focus {
+    box-shadow: none;
+    border-color: inherit;
+    background: #448AFF;
+  }
+}
+
+.btn-group.btn-group__full-width {
+  display: flex;
+  width: 100%;
+  .btn {
+    flex: 1
+  }
+}

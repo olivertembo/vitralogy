@@ -1,0 +1,12 @@
+.customer-filter-button-bar .btn.btn-default.active[disabled] {
+    background-color: $accent-color;
+}
+
+.job-filter-button-bar .btn.btn-default.active[disabled] {
+  background-color: $accent-color;
+}
+
+label[for*="filter"], label[htmlfor*="filter"] {
+    text-align: right;
+    color: rgb(105,105,105);
+}

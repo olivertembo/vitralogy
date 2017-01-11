@@ -1,0 +1,51 @@
+.overview-padding {
+    .alert {
+        margin-bottom: 0;
+
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.s-alert-box {
+    z-index: $z-index-react-s-alert !important;
+}
+
+li.reason__parent {
+    list-style: none;
+    font-weight: bold;
+
+    ul {
+        margin-bottom: 0;
+        padding-left: $padding-large-horizontal;
+        list-style: none;
+
+        li.reason__child {
+            font-weight: normal;
+        }
+    }
+}
+
+.comment-table {
+    .alert + .btn {
+        margin-top: $padding-large-vertical;
+    }
+
+    .follow-up.confirmed.message {
+        text-decoration: none;
+        color: darkblue;
+    }
+
+    .follow-up.confirmed {
+        text-decoration: line-through;
+    }
+
+    .follow-up {
+        color: red;
+    }
+}
+
+.event-queue .alert {
+    text-align: center;
+}

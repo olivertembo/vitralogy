@@ -1,0 +1,12 @@
+.input-addon-before {
+  color: $gray;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+}
+
+input.vit-input {
+  padding-left: 38px;
+}

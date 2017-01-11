@@ -1,0 +1,45 @@
+{
+  "checkin": {
+    "tooltips": {
+      "web": "Check In via web",
+      "mobile": "Check In via mobile",
+      "offline": "Check In occurred without connectivity",
+      "online": "Check In occurred with connectivity"
+    },
+    "cell": {
+      "for": "${ name } on ${ date }",
+      "by": "(by ${ name })"
+    }
+  },
+  "checkout": {
+    "tooltips": {
+      "web": "Check Out via web",
+      "mobile": "Check Out via mobile",
+      "offline": "Check Out occurred without connectivity",
+      "online": "Check Out occurred with connectivity"
+    },
+    "cell": {
+      "for": "${ name } on ${ date }",
+      "by": "(by ${ name })"
+    }
+  },
+  "workOrder": {
+    "scheduledDate": {
+      "lockedMessageNullDate": "This work order is locked, you must first set the scheduled date or the job can be canceled.",
+      "lockedMessage": "This work order is locked, changes may only be made from ${ minRange } until ${ maxRange }. The scheduled date can be changed or the job can be canceled.",
+      "selfPerformedLockMessageNullDate": "This work order is locked, you must first set the scheduled date or the job can be canceled/reassigned.",
+      "selfPerformedLockMessage": "This work order is locked, changes may only be made from ${ minRange } until ${ maxRange }. The scheduled date can be changed or the job can be canceled/reassigned."
+    },
+    "checklists": {
+      "agree": "I have reviewed the checklist items above and selected ${ numChecked } out of ${ itemCount } which are applicable."
+    }
+  },
+  "jobDashboard": {
+    "loadingMessage": {
+      "activeFilter": "Loading active jobs...",
+      "upcomingFilter": "Loading upcoming jobs...",
+      "canceledFilter": "Loading canceled jobs...",
+      "completedFilter": "Loading completed jobs..."
+    }
+  }
+}

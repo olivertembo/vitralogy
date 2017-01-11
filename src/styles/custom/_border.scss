@@ -1,0 +1,10 @@
+@import "../variables";
+
+@mixin rounded-corner($radius){
+    border-radius: $radius;
+}
+
+
+@mixin rounded-corner-x($topLeft, $topRight, $bottomRight, $bottomLeft){
+    border-radius: $topLeft $topRight $bottomRight  $bottomLeft;
+}

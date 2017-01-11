@@ -1,0 +1,42 @@
+.navbar-header {
+  padding: 14px 15px;
+}
+
+img.navbar-brand {
+  width: 169px;
+  height: 22px;
+  padding: 0;
+}
+
+@media (max-width: $screen-md-max) {
+  .navbar-default .navbar-nav > li > a {
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .navbar-default .navbar-brand,
+  .navbar-default .navbar-link,
+  .navbar-default .navbar-text {
+    font-size: 12px;
+    
+  }
+
+  .navbar-header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .navbar-default .navbar-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  img.navbar-brand {
+    width: 120px;
+    height: auto;
+    padding: 0;
+  }
+}

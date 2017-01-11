@@ -1,0 +1,69 @@
+//overriding default sass variables with my project's colors
+$react-dates-color-primary: $primary-color;
+$react-dates-color-primary-shade-1: $accent-color;
+$react-dates-color-primary-shade-2: $accent-color;
+$react-dates-color-primary-shade-3: $accent-color;
+$react-dates-color-primary-shade-4: $accent-color;
+$react-dates-color-focus: $accent-color;
+$react-dates-color-text-focus: $off-white;
+// @import '~react-dates/css/variables.scss';
+// @import '~react-dates/css/styles.scss';
+.DateInput {
+  cursor: pointer;
+}
+
+.filters {
+  .SingleDatePicker {
+    margin: 0px $padding-small-horizontal;
+    line-height: 1;
+  }
+  .DateInput {
+    width: auto;
+    vertical-align: baseline;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    &:after {
+      content: "\f073";
+      font: normal normal normal 14px/1 FontAwesome;
+      position: absolute;
+      top: 50%;
+      right: $padding-small-horizontal;
+      transform: translateY(-50%);
+      color: $gray;
+      transition: color 300ms;
+    }
+    .DateInput_input {
+      padding: 0px 22px 0px 6px;
+      height: 20px;
+      font-weight: 400;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      width: 105px;
+      transition: box-shadow 300ms;
+      &.DateInput_input__focused {
+        background-color: transparent;
+        color: $accent-color;
+        border-bottom-color: transparent;
+        &:after {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  .SingleDatePicker_picker {
+    top: 32px !important;
+    box-shadow: 0 1px 5px rgba($accent-color, 0.25);
+    border-color: $accent-color;
+    .CalendarDay__selected,
+    .CalendarDay__selected:active,
+    .CalendarDay__selected:hover {
+      background: $accent-color;
+      border-color: $accent-color;
+    }
+    .DayPickerKeyboardShortcuts_show__bottomRight {
+      border-right-color: $accent-color;
+    }
+  }
+  .DateInput_fang {
+    top: 21px !important;
+  }
+}

@@ -1,0 +1,12 @@
+.checkbox .helper-text-hidden {
+  display: none;
+}
+
+.prereqs .checkbox hr {
+  margin-top: 10px!important;
+  margin-bottom: 15px!important;
+}
+
+.check-list .required-check-item {
+  color: $brand-danger;
+}

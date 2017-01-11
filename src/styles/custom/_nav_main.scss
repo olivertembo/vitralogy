@@ -1,0 +1,188 @@
+@import "../variables";
+@import "variables";
+
+$menuHeight: $navbar-height;
+$selectedMenuIndicatorWidth: 6px;
+.navbar-default {
+  background-color: $white-color;
+  box-shadow: inset 0 -1px 0 0 $pale-lilac-color;
+  height: $menuHeight;
+  border: none;  
+  display: flex;
+  align-items: center;
+  .container-fluid{
+    padding: {
+      left: 25px;
+      right: 60px;
+      top: 0;
+      bottom: 0;
+    }
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .navbar-header {
+      margin: 0;
+      padding: 0;
+      .st0{
+        fill: $logo-color;
+      }
+    } 
+    .navbar-collapse{
+      display: flex !important;
+      align-items: center;
+      width: 100%;
+      height: 100% !important;
+      margin-left: 153px;;
+      > ul.navbar-nav{
+        height: 100%;
+        li {
+          height: 100%;
+          a{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.1px;
+           
+            color: $black-color;                      
+            &:hover{
+              color: $dark-blue-color;
+            }
+            > .nav__item-icon {
+              color: $icon-base-color;
+              margin-right: 5px;
+            }
+          }
+          &.active{
+            
+            a {
+              font-family: Poppins;
+              font-size: 14px;
+              font-weight: 600;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: 0.1px;
+              color: $dark-blue-color;
+              background: transparent;
+             
+              &::after {
+                content: ' ';                
+                width: $selectedMenuIndicatorWidth;
+                height: 52px;
+                border-radius: 100px 0 0 100px;                
+                right: 50%;
+                bottom: -1 * ($menuHeight * 0.5 - $selectedMenuIndicatorWidth * 0.5);             
+                position: relative;
+                background-color: $brand-color;               
+                transform: rotate(90deg);
+              }
+              
+            }
+          }
+        }
+      }
+      .logout-top-navigation{
+        margin-left: auto;
+
+        ul.nav.navbar-nav{
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          max-width: 250px;
+
+          li {
+            &.open{
+              a {
+                &.dropdown-toggle {
+                  background-color: transparent;
+                }
+              }
+            }
+            a {
+              padding: 0;
+              &.dropdown-toggle{
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: 0.1px;
+                color: $black-color;
+              }                            
+            }
+            &.account{
+              a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-top: 5px;
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: 0.1px;
+                color: $icon-base-color;
+              }
+            }
+
+            .dropdown-menu {
+              border-radius: $border-radius-sm 0 $border-radius-sm $border-radius-sm;
+              border: none;
+              margin-top: 5px;
+
+              li{
+                &:not(.divider){
+                  padding: 5px 10px;
+                }
+
+                &.divider{
+                  margin: 5px 0;
+                }
+
+                a{
+                  font-family: Roboto;
+                  font-size: 12px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1;
+                  letter-spacing: 0.1px;
+                  color: $black-color;
+                  &:hover{
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+  
+//   &.navbar-qa {
+//     background-color: $nav-color-qa;
+//   }
+  
+//   &.navbar-staging {
+//     background-color: $nav-color-staging;
+//   }
+  
+//   &.navbar-prod {
+//     background-color: $nav-color-prod;
+//   }
+}

@@ -1,0 +1,26 @@
+.modal-header {
+  background-color: $primary-color-dark;
+}
+
+.modal-title {
+  color: $primary-color-text;
+  letter-spacing: 1px;
+}
+
+.ReactModal__Overlay--after-open {
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-inline-start: 0;
+  z-index: $z-index-modal !important;
+}
+
+.time-horizon-modal {
+  width: 95%;
+}
+
+.data-form-modal {
+  width: 75%;
+}

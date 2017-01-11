@@ -1,0 +1,171 @@
+@import "../variables";
+
+body {
+  overflow-x: hidden;
+}
+$sidebar-toggled-width: 390px;
+$titleLinkMarginLeft: 20px;
+/* Toggle Styles */
+
+
+.sidebar-layout {
+  overflow: auto;
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  .sidebar-layout__sidebar {    
+    z-index: 1000;
+    position: fixed;
+    left: $sidebar-toggled-width;
+    width: 64px;
+    height: calc(100% - 50px);
+    margin-left: -$sidebar-toggled-width;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: inset -1px 0 0 0 $pale-lilac-color;
+    background-color: $white-color;
+    @media (max-width: $screen-sm-max) {
+      left: $sidebar-toggled-width;
+      margin-left: -$sidebar-toggled-width;
+    }
+
+    section {
+      display: none;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+  
+    hr {
+      border-color: $gray-light;
+    }
+  
+    .toggle-icon {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      font-size: 30px;
+      transform: none;      
+      transition: transform 800ms ease;
+      path {
+        fill: $medium-blue-color;
+      }     
+    }
+  
+    .section-title {    
+      margin-bottom: 0;      
+      .container-fluid{
+        padding: {
+          left: 0;
+          right: 0;
+        }
+        a, h1{
+          margin: {
+            top: 15px;
+            left: $titleLinkMarginLeft;
+            bottom: 15px;
+          }   
+          
+          text-decoration: none;     
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 1px;
+          color: $icon-base-color;
+
+          max-width: 85%;         
+          height: 52px;
+          display: flex;
+          align-items: center;
+          
+          > span {
+            white-space: nowrap;          
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &.selected{
+            color: $blue-color;
+            &::before{
+                content: ' ';
+                width: 10px;
+                height: 31px;
+                border-radius: 100px;                                        
+                margin-left: -$titleLinkMarginLeft - 5px;
+                position: absolute;
+                background-color: $medium-blue-color;
+            }
+          }
+        }
+      }
+    }
+
+    .section-overview {     
+      height: calc(100% - 60px);   
+      .container-fluid {
+        padding:  0 0 10px 0; 
+        .row {
+          margin: 0;
+          > div {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-layout__content-wrapper {
+    position: absolute;
+    left: 64px;
+    width: calc(100% - 64px);
+    padding-top: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  &.toggled {
+    padding-left: $sidebar-toggled-width;
+       
+    .sidebar-layout__sidebar {
+      width: $sidebar-toggled-width;
+      @media (max-width: $screen-sm-max) {
+        width: $sidebar-toggled-width;
+      }
+      section{
+        display: block;
+      }
+
+      .toggle-icon{        
+        transform: rotate( -180deg );             
+      }
+    }
+   
+    .sidebar-layout__content-wrapper
+     {
+      position: absolute;
+      left: $sidebar-toggled-width;
+      width: calc(100% - #{$sidebar-toggled-width});
+      @media (max-width: $screen-sm-max) {
+        left: $sidebar-toggled-width;
+        width: calc(100% - #{$sidebar-toggled-width});
+      }
+    }
+
+    & .sidebar-layout__sidebar > section {
+      display: block;
+    }
+  }
+}
+

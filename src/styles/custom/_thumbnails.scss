@@ -1,0 +1,48 @@
+// Fixed Aspect Ratio
+.img-parent-fixed {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 4px;
+  overflow: hidden;
+
+  &.img-thumbnail {
+    border: none;
+    border-radius: 0;
+  }
+  .img-ratio-sizer {
+    position: relative;
+    padding-top: 40%;
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+  }
+  .img-ratio-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @media (max-width: $screen-xs-max) {
+      position: static;
+    }
+  }
+  img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    max-width:100%;
+    display:block;
+    transform: translate(-50%, -50%);
+    max-height:100%;
+    @media (max-width: $screen-xs-max) {
+      position: static;
+      transform: none;
+      max-height: 400px
+    }
+  }
+  &.img-parent-fixed--fw img {
+    width: 100%;
+    max-height: none;
+  }
+}

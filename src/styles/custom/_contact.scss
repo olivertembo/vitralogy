@@ -1,0 +1,41 @@
+section.contact {
+  margin-bottom: $padding-large-vertical;
+}
+
+.profile-list__row {
+  display: table-row;
+  .profile-list__icon,
+  .profile-list__content,
+  .profile-list__actions {
+    display: table-cell;
+    height: 38px;
+    padding-bottom: ($padding-large-vertical);
+  }
+
+  .profile-list__icon {
+    width: 60px;
+    text-align: center;
+  }
+
+  .profile-list__content {
+    padding-right: $padding-large-horizontal;
+    .meta {
+      font-style: normal;
+      &:before {
+        content: '\2022';
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .profile-list--no-icon & .profile-list__content {
+    padding-left: 22px;
+  }
+
+  .profile-list__actions {
+    display: none;
+  }
+  &:hover .profile-list__actions {
+    display: table-cell;
+  }
+}

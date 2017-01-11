@@ -1,0 +1,147 @@
+@import "../variables";
+
+$siteNodeHeight: 52px;
+$childNodeHeight: 48px;
+$childTreePadLeft: 33px;
+
+.dashboard-filter__content{  
+    ul.ant-tree-child-tree{
+        padding-left: $childTreePadLeft;
+        .ant-tree-node-content-wrapper{
+            
+        }
+    }  
+    ul.ant-tree,
+    ul.ant-tree-child-tree {
+        > li {
+            padding: 0;
+
+            &::before{
+                display: none;
+            }
+            &.ant-tree-treenode-selected {
+                
+            }
+            
+            &.site-node{
+                > .ant-tree-switcher{
+                    top: calc(#{$siteNodeHeight - 24px} * 0.5);
+                    left: 40px;
+                }
+                > .ant-tree-node-content-wrapper{
+                    height: $siteNodeHeight;     
+                    .ant-tree-icon__customize{
+                        margin-left: 20px;
+                    }
+                    .ant-tree-title{
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.1px;                       
+                    }
+                }
+            }
+            &.asset-type-node,.asset-node {
+                > .ant-tree-switcher{                   
+                    top: calc(#{$childNodeHeight - 24px} * 0.5);
+                    left: 20px;
+                }
+                > .ant-tree-node-content-wrapper{
+                    height: $childNodeHeight;  
+                    
+                    &.ant-tree-node-selected{                        
+                        &::before{
+                            position: absolute;
+                            left: -2 * $childTreePadLeft;
+                        }
+                    }      
+                    .ant-tree-title{
+                        font-family: Poppins;
+                        font-size: 12px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.09px;
+                    }
+                }
+            }
+           
+            .ant-tree-switcher{
+                transition: transform 800ms ease;
+                position: absolute;
+                right: 5px;
+               
+                background: transparent  !important;
+                &.ant-tree-switcher_open{
+                    transform: rotate( -180deg );  
+                }
+                &.ant-tree-switcher-noop{
+                    display: none;
+                }
+            }
+
+            .ant-tree-node-content-wrapper{
+                width: 100%;
+                padding-right: 20px;   
+                padding-left: 0;                    
+                display: flex;
+                align-items: center;                           
+
+                &:hover{
+                    background: transparent;
+                }
+                &.ant-tree-node-selected{
+                    background: transparent;
+                    .ant-tree-icon__customize{
+                        svg.node-icon{
+                            path{
+                                fill: $brand-color
+                            }
+                        }
+                    }
+                    &::before{
+                        content: ' ';
+                        width: 10px;
+                        height: 31px;
+                        border-radius: 100px;                                        
+                        margin-left: -5px;
+                        position: absolute;
+                        background-color: $medium-blue-color;
+                    }   
+
+                    .ant-tree-title{
+                        color: $blue-color;
+                    }
+                }
+                .ant-tree-icon__customize{
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+                    flex-grow: 0;                   
+                    margin-right: 22px;
+                    svg.node-icon{
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        path {
+                            fill: $icon-base-color;
+                        }                        
+                    }                    
+                }
+
+                .ant-tree-title{                    
+                    white-space: nowrap;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    
+                    width: 90%;
+                    color: $black-color;
+                }
+            }
+        }
+    }
+}
